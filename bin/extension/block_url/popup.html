@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TINSOFT PROXY</title>
+
+
+</head>
+
+<body>
+
+    <table style="width: 800px; height: 331px;" align="center">
+        <tbody>
+            <tr style="height: 54px;">
+                <td style="text-align: center; background-color: #4adab1; height: 54px; width: 360px;" colspan="2">
+                    <h3 style="padding-top:10px"><span style="color: #ffffff;">TINSOFT PROXY</span></h3>
+                    <h4><label id="status1">Connected!</label></h4>
+                    <p style="padding-bottom:10px"><em><label id="status2">status</label></em></p>
+                </td>
+            </tr>
+            <tr style="height: 25px;">
+                <td style="width: 65px; height: 25px; text-align: right;">Input:</td>
+                <td style="width: 295px; height: 25px;"><textarea id="input" style="width: 660px;height: 150px;"
+                        type="text"></textarea></td>
+            </tr>
+            <tr style="height: 18px;">
+                <td style=" height: 18px; text-align: right;">Location:</td>
+                <td style=" height: 18px;"><select id="mySelect">
+                        <option>0.Random</option>
+                    </select>
+                    <button id="reload">Load</button>
+                </td>
+            </tr>
+            <tr style="height: 18px;">
+                <td style=" height: 18px;">&nbsp;</td>
+                <td style=" height: 18px;"><input name="method" value="1" id="new" type="radio" />Set new IP<input
+                        name="method" id="old" value="2" type="radio" />Get current IP</td>
+            </tr>
+            <tr style="height: 18px;">
+                <td style=" height: 18px;">&nbsp;</td>
+                <td style=" height: 18px;"><input id="reconnect" type="checkbox" />Auto reconnect when timeout</td>
+            </tr>
+            <tr style="height: 22px;">
+                <td style=" height: 22px;">&nbsp;</td>
+                <td style=" height: 22px;"><input style="padding: 10px; width: 110px;" id="btnRun" type="submit"
+                        value="RUN" /><input style="padding: 10px; width: 110px;" id="btnStop" type="submit"
+                        value="STOP" /></td>
+            </tr>
+            <tr style="height: 32px;">
+                <td style="text-align: center; height: 32px; font-size:14px" colspan="2"><a
+                        href="http://proxy.tinsoftsv.com/">HOME</a> | <a
+                        href="https://www.facebook.com/TinSoft">@TINSOFT</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+<script type="text/javascript" src="popup.js"></script>
+
+</html>

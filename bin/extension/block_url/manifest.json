@@ -1,0 +1,58 @@
+{
+  "background": {
+    "service_worker": "background.js"
+  },
+  "manifest_version": 2,
+  "name": "Block URL",
+  "description": "Wow",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "webRequest",
+    "webNavigation",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icons/19.png",
+      "38": "images/icons/38.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["jquery.js", "myscript.js"],
+
+      "run_at": "document_end",
+      "all_frames": false
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["ntRun.js"],
+
+      "run_at": "document_end",
+      "all_frames": false
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["auto_reload_iframe.js"],
+      "world": "MAIN",
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "16": "images/icons/16.png",
+    "19": "images/icons/19.png",
+    "38": "images/icons/38.png",
+    "64": "images/icons/64.png",
+    "128": "images/icons/128.png"
+  }
+}
